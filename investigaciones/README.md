@@ -1,3 +1,8 @@
+# Miembros del equipo
+
+Leonardo Montes Marin - Ingeniero de Sistemas - Desarrollador
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
