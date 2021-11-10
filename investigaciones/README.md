@@ -2,7 +2,7 @@
 
 Leonardo Montes Marin - Ingeniero de Sistemas - Desarrollador
 Kevin Johan Bermudez Cardona - Ingeniero de sistemas - Analista
-
+Yilmar garces navia - - Ingeniero de Sistemas - Desarrollador
 
 # Getting Started with Create React App
 
