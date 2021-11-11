@@ -6,6 +6,10 @@ Kevin Johan Bermudez Cardona - Ingeniero de sistemas - Analista
 
 Yilmar garces navia - - Ingeniero de Sistemas - Desarrollador
 
+Mauricio Salazar-  - Tecnologo Telecomunicaciones- - Ingeniero Sistemas-  -Desarrollador-
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
