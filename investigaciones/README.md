@@ -8,6 +8,8 @@ Yilmar garces navia - - Ingeniero de Sistemas - Desarrollador
 
 Mauricio Salazar-  - Tecnologo Telecomunicaciones- - Ingeniero Sistemas-  -Desarrollador-
 
+Diego Genaro Klinger Diaz - Ingeniero Industrial - Desarollador 
+
 
 
 # Getting Started with Create React App
