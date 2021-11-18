@@ -32,5 +32,5 @@ const userSchema = new Schema<User> ({
         enum:Enum_Rol,
        }
 });
-const userModel =model("User",userSchema);
+const userModel =model("User",userSchema, "usuarios");   // tercer parametro nombre de coleccion en DB 
 export {userModel};
