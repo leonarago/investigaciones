@@ -1,0 +1,16 @@
+Lunes - Diego Klinger  1002461787
+Martes - Kevin Bermudez 1088038286
+Miércoles - Yilmar Garcés 1061687963 
+Jueves - Mauricio Salazar 1072189752
+Viernes - Leonardo Montes 1053778744
+
+
+
+Diego Klinger;Kevin Bermudez;Yilmar Garcés;Mauricio Salazar; Leonardo Montes
+
+ 1002461787;1088038286;1061687963;1072189752;1053778744
+
+Nombre Equipo: ProjectSoft
+
+¿Qué hiciste ayer? 
+
