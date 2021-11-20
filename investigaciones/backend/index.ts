@@ -4,22 +4,22 @@ import {Enum_Rol,Enum_EstadoUsuario, Enum_TipoObjetivo, Enum_EstadoInscripcion} 
 import { projectModel } from './models/projects';
 import { objectiveModel } from "./models/objective";
 import { inscriptionModel } from "./models/inscription";
+import { avancesModel } from "./models/avances";
 
 const main=async() =>{
     await conectarBD();
    
 
-
-     await inscriptionModel.create({
+     await avancesModel.create({
         proyecto: '6198687a394731707fcaa07a',
-        estudiante: '619866c8a84351daddb224be',
-        estado: Enum_EstadoInscripcion.aceptada,
+        creadopor: '619866c8a84351daddb224be',
+        descripcionavance: "avance diario",
+        observacion: "Observacion en avance diario",
         fechaIngreso: Date.now(),
-        fechaEgreso: new Date("2022/11/10")
     }).then((u)=>{
-        console.log('usuario inscrito',u);
+        console.log('avance Realizado',u);
     }).catch((e=>{
-        console.error('error inscribiendo al usuario',e);
+        console.error('error realizando el avance',e);
     })); 
     
     // const inscripcion = await inscriptionModel.find({ _id: '619809855e99e962df597efb'}).populate('proyecto').populate('estudiante')
@@ -31,6 +31,19 @@ const main=async() =>{
 main();
 
 
+
+///     await inscriptionModel.create({
+//     proyecto: '6198687a394731707fcaa07a',
+//     estudiante: '619866c8a84351daddb224be',
+//     estado: Enum_EstadoInscripcion.aceptada,
+//     fechaIngreso: Date.now(),
+//     fechaEgreso: new Date("2022/11/10")
+// }).then((u)=>{
+//     console.log('usuario inscrito',u);
+// }).catch((e=>{
+//     console.error('error inscribiendo al usuario',e);
+// })); 
+///
 //CRUD USUARIOS-------------
 // codigo para crear los usuarios
 // await userModel.create({
