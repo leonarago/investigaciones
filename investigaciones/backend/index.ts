@@ -7,10 +7,12 @@ import { inscriptionModel } from "./models/inscription";
 
 const main=async() =>{
     await conectarBD();
+   
 
-    /* await inscriptionModel.create({
-        proyecto: '619804b9811348a176953725',
-        estudiante: '6197ba8cc39e9eec4a20eb73',
+
+     await inscriptionModel.create({
+        proyecto: '6198687a394731707fcaa07a',
+        estudiante: '619866c8a84351daddb224be',
         estado: Enum_EstadoInscripcion.aceptada,
         fechaIngreso: Date.now(),
         fechaEgreso: new Date("2022/11/10")
@@ -18,10 +20,10 @@ const main=async() =>{
         console.log('usuario inscrito',u);
     }).catch((e=>{
         console.error('error inscribiendo al usuario',e);
-    })); */
+    })); 
     
-    const inscripcion = await inscriptionModel.find({ _id: '619809855e99e962df597efb'}).populate('proyecto').populate('estudiante')
-    console.log('la inscripcion es:', inscripcion);
+    // const inscripcion = await inscriptionModel.find({ _id: '619809855e99e962df597efb'}).populate('proyecto').populate('estudiante')
+    // console.log('la inscripcion es:', inscripcion);
     
     
 
@@ -31,19 +33,18 @@ main();
 
 //CRUD USUARIOS-------------
 // codigo para crear los usuarios
-   /* await userModel.create({
-        correo: 'kevin@gmail.com',
-        identificacion: '113',
-        nombre: 'Kevin',
-        apellido: 'Bermu',
-        rol:Enum_Rol.administrador,        
-    }).then((u)=>{
-        console.log('usuario creado',u);
-    }).catch((e=>{
-        console.error('error creando el usuario',e);
-    })); */
-
-     //codigo para realizar consulta a base de datos y traer todos los usuarios existentes
+// await userModel.create({
+//     correo: 'perez@gmail.com',
+//     identificacion: '111183',
+//     nombre: 'Prueba3',
+//     apellido: 'perez',
+//     rol:Enum_Rol.lider,        
+// }).then((u)=>{
+//     console.log('usuario creado',u);
+// }).catch((e=>{
+//     console.error('error creando el usuario',e);
+// })); 
+//      //codigo para realizar consulta a base de datos y traer todos los usuarios existentes
     /* await userModel.find().then(u=>{
         console.log("usuarios",u);
     }).catch(e=>{
@@ -73,24 +74,23 @@ main();
     // }));
 
     //CREACION PROYECTO CON RELACION--------------------------------------------
-    /* projectModel.create({
-        nombre:"Proyecto2",
-        presupuesto:90000000,
-        fechaInicio: Date.now(),
-        fechaFin: new Date("2022/11/10"),
-        lider: '6197ba8cc39e9eec4a20eb73'
-    }).then((u)=>{
-        console.log('usuario creado',u);
-    }).catch((e=>{
-        console.error('error creando el usuario',e);
-    })); */
-
-    //Mostrar el documento con la con la relacion
+    // projectModel.create({
+    //     nombre:"Proyecto2",
+    //     presupuesto:90000000,
+    //     fechaInicio: Date.now(),
+    //     fechaFin: new Date("2022/11/10"),
+    //     lider: '6197ba8cc39e9eec4a20eb73'
+    // }).then((u)=>{
+    //     console.log('usuario creado',u);
+    // }).catch((e=>{
+    //     console.error('error creando el usuario',e);
+    // })); 
+ //Mostrar el documento con la con la relacion
     /* const proyecto = await projectModel.find({ nombre: 'Proyecto1' }).populate('lider')
     console.log('el proyecto es: ', proyecto); */
 
     //CREACION DE OBJETIVOS PARA TENERLOS EN EL ARRAY DE PROYECTOS----------------
-    /* const object = objectiveModel.create({
-        descripcion: "Este es el objetivo especifico",
-        tipo: Enum_TipoObjetivo.especifico,
-    }) */
+    // const object = objectiveModel.create({
+    //     descripcion: "Este es el objetivo General",
+    //     tipo: Enum_TipoObjetivo.general,
+    // }) 
