@@ -1,5 +1,5 @@
 import { Schema,model } from "mongoose";
-import {Enum_Rol,Enum_EstadoUsuario} from "./enum";
+import {Enum_Rol,Enum_EstadoUsuario} from "../enums/enum";
 
 interface User {
     correo: string;
@@ -17,12 +17,6 @@ const userSchema = new Schema<User> ({
         validate:{
             validator:(email)=>{
                 return /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(email);
-                // if(email.includes('@') && email.includes('.')){
-                //     return true;
-                // }
-                // else{
-                //     return false;
-                // }
             },
             message:'El formato del correo esta mal, rectificalo',
         },
@@ -44,13 +38,13 @@ const userSchema = new Schema<User> ({
         type:String,
         required:true,
         enum:Enum_Rol,
-    },
+       },
     estado:{
         type:String,
         required:true,
         enum:Enum_EstadoUsuario,
-        default:Enum_EstadoUsuario.pendiente,
+        default:Enum_EstadoUsuario.PENDIENTE,
     }
 });
-const userModel =model("User",userSchema, "usuarios");   // tercer parametro nombre de coleccion en DB 
+const userModel =model("User",userSchema);
 export {userModel};
