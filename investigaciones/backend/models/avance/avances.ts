@@ -1,5 +1,5 @@
 import { model, Schema } from "mongoose";
-import { projectModel } from "../proyecto/projects";
+import { ProjectModel } from "../proyecto/proyecto";
 import { userModel } from "../usuario/user";
 
 interface Avances{
@@ -16,7 +16,7 @@ const avancesSchema = new Schema<Avances>({
     proyecto: {
         type: Schema.Types.ObjectId,
         required: true,
-        ref: projectModel
+        ref: ProjectModel
     },
     descripcionavance: {
         type: String,
