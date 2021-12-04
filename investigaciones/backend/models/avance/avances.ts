@@ -1,42 +1,37 @@
-import { model, Schema } from "mongoose";
-import { ProjectModel } from "../proyecto/proyecto";
-import { userModel } from "../usuario/user";
+import { Schema,model } from "mongoose";
+import {ProjectModel} from "../proyecto/proyecto";
+import {userModel} from "../usuario/user";
 
-interface Avances{
-    proyecto: Schema.Types.ObjectId;
-    descripcionavance: string;
-    observacion: string;
-    creadopor: Schema.Types.ObjectId;
-    fechaIngreso: Date;  
-} 
-
-
-
-const avancesSchema = new Schema<Avances>({
+interface avance{
+    fecha: Date;
+    descripcion: string;
+    observaciones: [string];
+    creadoPor:Schema.Types.ObjectId;
+    proyecto:Schema.Types.ObjectId;
+}
+const avanceSchema= new Schema<avance>({
+    
+    fecha:{
+        type:Date,
+        required:true,
+    },
+    descripcion:{
+        type:String,
+        required:true,
+    },
+    observaciones:[{
+        type:String,
+    }],
     proyecto: {
-        type: Schema.Types.ObjectId,
-        required: true,
-        ref: ProjectModel
+        type:Schema.Types.ObjectId,
+        ref:ProjectModel,
+        required:true,
     },
-    descripcionavance: {
-        type: String,
-        required: true,
-    },
-    creadopor: {
-        type: Schema.Types.ObjectId,
-        required: true,
-        ref: userModel
-    },
-
-    fechaIngreso: {
-        type: Date,
-        required: true,
-    },
-    observacion: {
-        type: String,
-        required: true,
+    creadoPor:{
+        type:Schema.Types.ObjectId,
+        ref:userModel,
+        required:true,
     }
-})
-
-const avancesModel = model("Avances", avancesSchema);
-export {avancesModel};
+});
+const avanceModel=model('Advancement',avanceSchema);
+export {avanceModel};
