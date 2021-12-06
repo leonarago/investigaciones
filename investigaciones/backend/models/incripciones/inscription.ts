@@ -1,40 +1,39 @@
 import { Schema,model } from "mongoose";
-import { Enum_EstadoInscripcion } from "../enums/enum";
-import { ProjectModel } from "../proyecto/proyecto";
-import { userModel } from "../usuario/user";
+import {Enum_EstadoInscripcion} from "../enums/enum";
+import {ProjectModel} from "../proyecto/proyecto";
+import {userModel} from "../usuario/user";
 
-interface Inscription {
-    proyecto: Schema.Types.ObjectId;
-    estudiante: Schema.Types.ObjectId;
-    estado: Enum_EstadoInscripcion;
-    fechaIngreso: Date;
-    fechaEgreso: Date; 
+interface inscripcion{
+    estado:Enum_EstadoInscripcion;
+    fechaIngreso:Date;
+    fechaEgreso:Date;
+    proyecto:Schema.Types.ObjectId;
+    estudiante:Schema.Types.ObjectId;
 }
-
-const inscriptionSchema = new Schema<Inscription>({
-    proyecto: {
-        type: Schema.Types.ObjectId,
-        required: true,
-        ref: ProjectModel
+const inscripcionSchema = new Schema<inscripcion>({
+    fechaIngreso:{
+        type:Date,
+        required:true,
     },
-    estudiante: {
-        type: Schema.Types.ObjectId,
-        required: true,
-        ref: userModel
+    fechaEgreso:{
+        type:Date,
+        required:true,
     },
-    estado: {
-        type: String,
-        required: true,
-        enum: Enum_EstadoInscripcion
+    estado:{
+        type:String,
+        enum:Enum_EstadoInscripcion,
+        required:true,
     },
-    fechaIngreso: {
-        type: Date,
-        required: true,
+    proyecto:{
+        type:Schema.Types.ObjectId,
+        ref:ProjectModel,
+        required:true,
     },
-    fechaEgreso: {
-        type: Date,
-        required: true
+    estudiante:{
+        type:Schema.Types.ObjectId,
+        ref:userModel,
+        required:true,
     }
-})
-
-export const inscriptionModel = model("Inscripcion", inscriptionSchema);
+});
+const inscriptionModel=model('Inscription',inscripcionSchema);
+export {inscriptionModel};
