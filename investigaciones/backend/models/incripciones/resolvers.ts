@@ -1,4 +1,4 @@
-import { inscriptionModel } from "./inscription";
+import { inscriptionModel } from "./inscripcion";
 
 const resolversInscripcion={
     Query:{
@@ -21,6 +21,3 @@ const resolversInscripcion={
     },
 };
 export {resolversInscripcion};
-© 2021 GitHub, Inc.
-Terms
-Pri

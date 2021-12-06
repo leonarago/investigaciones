@@ -1,5 +1,5 @@
 import { Query } from "mongoose";
-import { avanceModel } from "./avances";
+import { avanceModel } from "./avance";
 
 const resolversAvance={
     Query:{

@@ -1,4 +1,4 @@
-import { userModel } from "./user";
+import { userModel } from "./usuario";
 
 const resolversUsuarios = {
     Query:{
