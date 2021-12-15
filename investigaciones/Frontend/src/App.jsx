@@ -15,6 +15,7 @@ import AuthLayout from 'layouts/AuthLayout';
 import Register from 'pages/auth/register';
 import Login from 'pages/auth/login';
 import { AuthContext } from 'context/authContext';
+import EditarProyectos from 'pages/proyectos/editar';
 
 // import PrivateRoute from 'components/PrivateRoute';
 
