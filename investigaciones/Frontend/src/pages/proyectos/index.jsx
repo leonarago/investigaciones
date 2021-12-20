@@ -24,11 +24,12 @@ import {
 } from 'components/Accordion';
 
 import ReactLoading from 'react-loading';
+import Spinner from 'components/spinner';
 
 const IndexProyectos = () => {
     const { loading, error, data:queryProyecto } = useQuery(GET_PROYECTOS);  
   
-    if (loading) return <div>Cargando...</div>;
+    if (loading) return <div><Spinner/></div>;
   
     if (queryProyecto.Proyectos) {
       return (
