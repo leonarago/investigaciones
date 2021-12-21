@@ -33,7 +33,7 @@ const IndexProyectos = () => {
   
     if (queryProyecto.Proyectos) {
       return (
-        <div className='p-10 flex flex-col'>
+        <div className='bg-blue-400 p-10 flex flex-col'>
           <div className='flex w-full items-center justify-center'>
             <h1 className='text-2xl font-bold text-gray-900'>
               Lista de Proyectos
@@ -43,7 +43,7 @@ const IndexProyectos = () => {
           <div className='my-2 self-end'>
             <button
               type='button'
-              className='bg-indigo-500 text-gray-50 p-2 rounded-lg shadow-lg hover:bg-indigo-400'
+              className='bg-indigo-400 text-gray-50 p-2 rounded-lg shadow-lg hover:bg-indigo-400'
             >
               <Link to='/proyectos/nuevo'>Crear nuevo proyecto</Link>
             </button>
@@ -239,7 +239,7 @@ const IndexProyectos = () => {
         />
       );
     return (
-      <div className='mx-5 my-4 bg-gray-50 p-8 rounded-lg flex flex-col items-center justify-center shadow-xl'>
+      <div className='mx-5 my-4 bg-indigo-400 p-8 rounded-lg flex flex-col items-center justify-center shadow-xl'>
         <div className='text-lg font-bold'>{tipo}</div>
         <div>{descripcion}</div>
         <PrivateComponent roleList={['ADMINISTRADOR', 'LIDER']}>
