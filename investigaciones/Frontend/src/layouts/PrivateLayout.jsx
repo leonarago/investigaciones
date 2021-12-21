@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { VALIDATE_TOKEN } from 'graphql/auth/mutation';
 import 'react-toastify/dist/ReactToastify.css';
+import Spinner from 'components/spinner';
 
 const PrivateLayout = () => {
   const { authToken, setToken, loadingAuth } = useAuth();
@@ -65,7 +66,7 @@ const PrivateLayout = () => {
     }
   }, [loadingAuth, authToken, navigate]);
 
-  if (loadingMutation || loadingAuth) return <div>Loading....</div>;
+  if (loadingMutation || loadingAuth) return <div><Spinner/></div>;
 
   return (
     <div className='flex flex-col md:flex-row flex-no-wrap h-screen'>
